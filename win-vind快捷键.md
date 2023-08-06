@@ -468,4 +468,4 @@
 
 # 快捷键图示
 
-![](C:/Users/Administrator/Desktop/win-vind%E5%BF%AB%E6%8D%B7%E9%94%AE.assets/img202308061152295.jpg)
+![win-vind-1691338885854-2](./win-vind快捷键.assets/win-vind-1691338885854-2.jpg)

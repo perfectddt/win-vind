@@ -59,7 +59,8 @@ noremap <f19> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_w
    
 noremap <esc-down> <f19><to_resident>
 noremap <esc-j> <f19><to_resident>
-
+noremap <esc-up> <f19><to_insert>
+noremap <esc-k> <f19><to_insert>
 noremap i <f19><to_insert>
     
 map ff <f18><to_edi_normal>

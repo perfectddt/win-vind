@@ -1,7 +1,8 @@
 " Choose t version of {tiny, small, normal, big, huge}.
 version huge
 " ------------ Example ------------
-"软件在空模式下可以屏蔽quicker、windows、autohotkey自带的快捷键
+" nmap <ctrl-2> <to_resident>:! H:/quicker_open_close.ahk<cr>
+" nmap <ctrl-2> <to_resident>:e H:/quicker_open_close.ahk<cr>
 set initmode=r
 "EasyClick 字体设置. 改为类似Vimium的黑黄配色 
 "set easyclick_fontsize=37
@@ -27,11 +28,11 @@ inoremap <F8> <F8> "非递归，映射链到此截止
 "g  GUI Normal,GUI Visual=======================================
 "gn  GUI Normal-------------------------------------------------
 "gv  GUI Visual-------------------------------------------------
-gvmap v <to_gui_normal>
+gvmap v <f18><to_gui_normal>
 "e  Edi Normal, Edi Visual======================================
 "en  Edi Normal-------------------------------------------------
 "ev  Edi Visual-------------------------------------------------
-evmap v <to_edi_normal>
+evmap v <f18><to_edi_normal>
 "n  GUI Normal, Edi Normal======================================
 nmap <C-x> :q<cr> "关闭tab
 nmap <C-q> :close<cr> "关闭窗口
@@ -51,18 +52,22 @@ nmap fk <gridmove>
 "v  GUI Visual, Edi Visual======================================
 "-----------------------------------------------
 "空 GUI Normal, GUI Visual, Edi Normal, Edi Visual**************
+"x noremap <capslock> <esc>
+"x noremap <capslock> {<esc>}    " sandwich in {} brackets
+"x map <capslock> <f15>
+"x noremap <f15> <esc>
 noremap <F8> <F8> "非递归，映射链到此截止 
 " 定义f18函数
-"路径不能有"-"号，不能有中文路径
-noremap <f18> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind\quicker_close.url<cr>
-noremap <f19> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind\quicker_open.url<cr>
-   
+noremap <f18> <to_resident>:e C:\Users\Administrator\Documents\Quicker\重启win-vind\重启win-vind\quicker_close.url<cr>
+noremap <f19> <to_resident>:e C:\Users\Administrator\Documents\Quicker\重启win-vind\重启win-vind\quicker_open.url<cr>
+    
 noremap <esc-down> <f19><to_resident>
 noremap <esc-j> <f19><to_resident>
-
 noremap i <f19><to_insert>
     
 map ff <f18><to_edi_normal>
+" map ff <to_resident>:e C:\Users\Administrator\Documents\Quicker\重启win-vind\重启win-vind\quicker_close.url<cr><to_edi_normal>
+" map ff <to_edi_normal>
 noremap <esc-l> <f18><to_edi_normal>
 noremap <esc-right> <f18><to_edi_normal>
 noremap <esc-h> <f18><to_gui_normal>

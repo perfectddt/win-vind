@@ -54,9 +54,12 @@ nmap fk <gridmove>
 noremap <F8> <F8> "非递归，映射链到此截止 
 " 定义f18函数
 "路径不能有"-"号，不能有中文路径
-noremap <f18> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind\quicker_close.url<cr>
-noremap <f19> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind\quicker_open.url<cr>
+"noremap <f18> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind\quicker_close.url<cr>
+"noremap <f19> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind\quicker_open.url<cr>
    
+noremap <f18> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind2\quicker_close.ahk<cr>
+noremap <f19> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind2\quicker_open.ahk<cr>
+
 noremap <esc-down> <f19><to_resident>
 noremap <esc-j> <f19><to_resident>
 noremap <esc-up> <f19><to_insert>

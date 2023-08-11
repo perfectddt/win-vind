@@ -9,6 +9,8 @@ set initmode=r
 "set easyclick_fontname = MSYH    "微软雅黑字体
 set easyclick_fontcolor=#000000
 set easyclick_bgcolor=#fae26b
+set cmd_ymargin=40
+set cmd_xmargin=15
 set cmd_fadeout=300
 
 " Virtual command line options

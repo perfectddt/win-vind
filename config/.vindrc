@@ -4,14 +4,11 @@ version huge
 "软件在空模式下可以屏蔽quicker、windows、autohotkey自带的快捷键
 set initmode=r
 "EasyClick 字体设置. 改为类似Vimium的黑黄配色 
-"set easyclick_fontsize=37
-"set easyclick_fontweight=800
-"set easyclick_fontname = MSYH    "微软雅黑字体
-set easyclick_fontcolor=#000000
-set easyclick_bgcolor=#fae26b
-set cmd_ymargin=40
-set cmd_xmargin=15
-set cmd_fadeout=300
+set easyclick_fontsize= 16
+set easyclick_fontweight= 650
+set easyclick_fontname = "FiraCode Nerd Font"
+set easyclick_fontcolor= #000000
+set easyclick_bgcolor= #ccae00
 
 " Virtual command line options
 "命令行模拟emacs的绿色框
@@ -21,6 +18,11 @@ set cmd_roughpos = LowerLeft
 set cmd_maxchar = 100
 set cmd_fontcolor = #005f00
 set cmd_bgcolor = #afd700
+set cmd_ymargin = 40
+set cmd_xmargin = 15
+set cmd_fontname = FiraCode Nerd Font
+set cmd_fontweight = 1000
+set cmd_fadeout =300
 "i  insert mode+++++++++++++++++++++++++++++++++++++++++++++++++
 inoremap <F8> <F8> "非递归，映射链到此截止 
 "r  resident mode+++++++++++++++++++++++++++++++++++++++++++++++

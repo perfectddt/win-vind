@@ -52,6 +52,7 @@ nmap fk <gridmove>
 "nmap fj <easyclick>
 nmap fm <easyclick><click_mid>
 nmap fk <gridmove>
+nmap F <jump_cursor_with_keybrd_layout>
 "v  GUI Visual, Edi Visual======================================
 "-----------------------------------------------
 "空 GUI Normal, GUI Visual, Edi Normal, Edi Visual**************

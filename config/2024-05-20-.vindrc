@@ -1,0 +1,163 @@
+" Choose t version of {tiny, small, normal, big, huge}.
+version huge
+" ------------ Example ------------
+"软件在空模式下可以屏蔽quicker、windows、autohotkey自带的快捷键
+set initmode=r
+"EasyClick 字体设置. 改为类似Vimium的黑黄配色 
+set easyclick_fontsize= 16
+set easyclick_fontweight= 650
+set easyclick_fontname = "FiraCode Nerd Font"
+set easyclick_fontcolor= #000000
+set easyclick_bgcolor= #ccae00
+
+" Virtual command line options
+"命令行模拟emacs的绿色框
+set shell = cmd
+set cmd_fontsize = 25
+set cmd_roughpos = LowerLeft
+set cmd_maxchar = 100
+set cmd_fontcolor = #005f00
+set cmd_bgcolor = #afd700
+set cmd_ymargin = 40
+set cmd_xmargin = 15
+set cmd_fontname = FiraCode Nerd Font
+set cmd_fontweight = 1000
+set cmd_fadeout =300
+"i  insert mode+++++++++++++++++++++++++++++++++++++++++++++++++
+inoremap <F8> <F8> "非递归，映射链到此截止 
+"r  resident mode+++++++++++++++++++++++++++++++++++++++++++++++
+"命令行的设定
+"c  command mode++++++++++++++++++++++++++++++++++++++++++++++++
+"g  GUI Normal,GUI Visual=======================================
+"gn  GUI Normal-------------------------------------------------
+"gv  GUI Visual-------------------------------------------------
+gvmap v <to_gui_normal>
+"e  Edi Normal, Edi Visual======================================
+emap o <to_insert_nlbelow><f19>
+ennoremap O <to_insert_nlabove><f19>
+"ennoremap a <to_insert_append>
+"ennoremap A <to_insert_EOL>
+"ennoremap o <to_insert_nlbelow>
+"ennoremap O <to_insert_nlabove>
+"en  Edi Normal-------------------------------------------------
+"ev  Edi Visual-------------------------------------------------
+evmap v <to_edi_normal>
+"n  GUI Normal, Edi Normal======================================
+nmap <C-x> :q<cr> "关闭tab
+nmap <C-q> :close<cr> "关闭窗口
+"鼠标点击
+nnoremap f f 
+nmap fh <easyclick><click_left>
+nmap fo <easyclick><click_left>
+nmap fl <easyclick><click_right>
+nmap fa <easyclick><click_right>
+nmap fj <easyclick>
+nmap fm <easyclick><click_mid>
+nmap fk <gridmove>
+
+"nmap fj <easyclick>
+nmap fm <easyclick><click_mid>
+nmap fk <gridmove>
+nmap F <jump_cursor_with_keybrd_layout>
+"v  GUI Visual, Edi Visual======================================
+"-----------------------------------------------
+"空 GUI Normal, GUI Visual, Edi Normal, Edi Visual**************
+noremap <F8> <F8> "非递归，映射链到此截止 
+" 定义f18函数
+"路径不能有"-"号，不能有中文路径
+   
+noremap <f18> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind2\quicker_close.ahk<cr>
+noremap <f19> <to_resident>:e C:\Users\Administrator\Documents\Quicker\restart_win_vind\restart_win_vind2\quicker_open.ahk<cr>
+
+noremap <esc-down> <f19><to_resident>
+noremap <tab-down> <f19><to_resident>
+noremap <esc-j> <f19><to_resident>
+noremap <tab-j> <f19><to_resident>
+noremap <esc-up> <f19><to_insert>
+noremap <tab-up> <f19><to_insert>
+noremap <esc-k> <f19><to_insert>
+noremap <tab-k> <f19><to_insert>
+noremap i <f19><to_insert>
+    
+map fd <f18><to_edi_normal>
+map df <f18><to_edi_normal>
+noremap <esc-l> <f18><to_edi_normal>
+noremap <tab-l> <f18><to_edi_normal>
+noremap <esc-right> <f18><to_edi_normal>
+noremap <tab-right> <f18><to_edi_normal>
+noremap <esc-h> <f18><to_gui_normal>
+noremap <tab-h> <f18><to_gui_normal>
+noremap <esc-left> <f18><to_gui_normal>
+noremap <tab-left> <f18><to_gui_normal>
+
+"命令行的设定
+" 5 seconds
+noremap <ctrl-8> :set cmd_fadeout=5<cr>
+
+" 1 hour
+noremap <ctrl-9> :set cmd_fadeout=3600<cr>
+"窗口==================================================
+"窗口大小的调整
+map <c-w>e <window_resizer>
+map <win-e> <window_resizer>
+map <c-w>+ <increase_window_height>
+map <win-+> <increase_window_height>
+map <c-w>- <decrease_window_height>
+map <win-hbar> <decrease_window_height>
+
+map <c-w>d <minimize_current_window>
+map <win-d> <minimize_current_window>
+map <c-w>u <maximize_current_window>
+map <win-u> <maximize_current_window>
+"窗口的排布
+map <c-w>= <arrange_windows>
+map <win-=> <arrange_windows>
+
+map <c-w>H <snap_current_window_to_left>
+map <win-H> <snap_current_window_to_left>
+map <c-w><left> <snap_current_window_to_left>
+map <win-left> <snap_current_window_to_left>
+
+map <c-w>L <snap_current_window_to_right>
+map <win-L> <snap_current_window_to_right>
+map <c-w><right> <snap_current_window_to_right>
+map <win-right> <snap_current_window_to_right>
+
+map <c-w>J <snap_current_window_to_bottom>
+map <win-J> <snap_current_window_to_bottom>
+map <c-w>K <snap_current_window_to_top>
+map <win-K> <snap_current_window_to_top>
+"窗口的旋转
+map <c-w>r <rotate_windows>
+map <win-r> <rotate_windows>
+map <c-w>R <rotate_windows_in_reverse>
+map <win-R> <rotate_windows_in_reverse>
+" 窗口分割打开
+map <c-up> :sp<cr>
+map <c-down> :sp<cr>
+map <c-left> :vs<cr>
+map <c-right> :vs<cr>
+"窗口的
+map <c-w>q <close_current_window>
+map <win-q> <close_current_window>
+map <c-w>c <close_current_window>
+map <win-c> <close_current_window>
+" 选择窗口
+map <win-s> <switch_window>
+map <c-w>s <switch_window>
+map <win-j> <select_lower_window>
+map <c-w>j <select_lower_window>
+map <win-k> <select_upper_window>
+map <c-w>k <select_upper_window>
+map <win-h> <select_left_window>
+map <c-w>h <select_left_window>
+map <win-l> <select_right_window>
+map <c-w>l <select_right_window>
+map <win-n> <open_new_window>
+map <c-w>n <open_new_window>
+
+map <win-x> <exchange_window_with_nearest>
+map <c-w>x <exchange_window_with_nearest>
+
+
+
